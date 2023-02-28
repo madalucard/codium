@@ -1,0 +1,31 @@
+Angular zadanie:
+Je potrebne vytvorit jednoduchu aplikaciu ktora nacita zapasy zo suboru offer.json (v prilohe) a zobrazi ich. Zapasy budu oddelene podla sportov a lig (napriklad rozdielne tabulky, ina farba). Kazda liga bude mat pri sebe tlacidlo, ktore skryje zapasy v nej a pri dalsom kliknuti ich zase zobrazi.
+
+Zobrazeny bude nazov, naformatovany datum a cas (21.3. 13:20), nazov sportu, regionu a ligy a kurzy 1, X, 2, 1X, X2 (ak zapas niektory nema, zobazi sa prazdne pole/pomlcka).
+
+Zapasy su v EventChanceTypes, kurzy ku kazdemu zapasu su v Odds, identifikovane podla EventChanceTypeID. V labels su nazvy lig (zacinaju “LC_”), regionov (“RE_”) a sportov (“SP_”) identifikovane podla ich ID v zapasoch.
+
+ 
+
+
+Na vytvorenie je potrebne pouzit:
+Angular https://angular.io/docs 
+
+Bolo by dobre pouzit aj SASS https://sass-lang.com/   (SCSS syntax) ;)
+
+
+
+
+
+jQuery zadanie:
+Treba vytvoriť aplikáciu ktorá načíta zoznam zápasov a vykreslí ich názov v tlačítkach pod sebou.
+Tlačítka budú zoradené pod sebou podľa dátumu a zároven budú v skupinách podľa dňa kedy začínajú.
+
+Nad každou skupinou bude napisaný dátum kedy zápasy danej skupiny začínajú. Každé tlačidlo bude otvárat popup v ktorom sa zobrazí detail daného zápasu: názov zápasu, jeho naformátovaný dátum, čas a pravdepodobný víťaz (possibleWinner).
+Ak má otvorený detail zápasu "startDate" menší ako aktuálny čas (zápas sa už odohral), tak sa v modálnom okne zobrazí aj odporúčanie aby klikol na nedisablované tlačidlo ktoré je ďalšie v poradí spolu s názvom daného zápasu.
+
+Zároveň sa takéto tlačidlo disabluje a už nebude klikateľné.
+Taktiež sa celej skupine zápasov do ktorej zápas prislúcha zafarbí pozadie na oranžovo.
+Ak je v danej skupine disablované viac ako 1 tlačidlo, tak sa farba pozadia skupiny zmení na červeno. 
+
+Treba použit jQuery mobile, jQuery, JS a CSS.
