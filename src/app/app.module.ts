@@ -12,15 +12,23 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
 import { dateTimeFormatPipe } from './utils/pipes';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MatchesComponent } from './matches/matches.component';
 
 const appRoute: Routes = [
   //{ path: '', component: AppComponent },
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: 'Matches', component: MatchesComponent },
   { path: 'Testing', component: TableContainerComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, TableContainerComponent, dateTimeFormatPipe],
+  declarations: [
+    AppComponent,
+    MatchesComponent,
+    NavbarComponent,
+    TableContainerComponent,
+    dateTimeFormatPipe,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

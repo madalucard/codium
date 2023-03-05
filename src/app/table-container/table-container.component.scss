@@ -2,7 +2,7 @@ $main-color:#009879;
 $hover-color:#b6f8ec;
 $active-color:#3ef0cc;
 $white-color: #ffffff;
-$black-color:#3b3b3b;
+$font-color:#3b3b3b;
 $even-color:#edf8f6;
 $odd-color:#fcfcfc;
 
@@ -13,7 +13,7 @@ $odd-color:#fcfcfc;
   padding-top: 20px;
   height: 100%;
   .table-wrapper{
-    color:$black-color;
+    color:$font-color;
     overflow-x: auto;
     width: 1400px;
     height: 800px;
