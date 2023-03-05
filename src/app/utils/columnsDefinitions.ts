@@ -1,4 +1,4 @@
-export const COLUMNS_EVENTS = [
+export const COLUMNS_TEST = [
   'EventID',
   'EventName',
   'EventDate',
@@ -18,5 +18,4 @@ export const COLUMNS_EVENTS = [
   'LiveFeedReference',
   'LiveBettingView',
 ];
-export const columnsO = [];
-export const COLUMNS_LABELS: string[] = ['Typ, ID, LanguageID, Name'];
+export const COLUMNS_MATCHES = ['EventName', 'EventDate', 'Sport', 'League', 'BetRate'];

@@ -1,0 +1,31 @@
+<div class="component-container">
+  <h1>Matches</h1>
+  <div class="table-wrapper">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th *ngFor="let column of displayedColumns">{{ column }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let match of matches">
+          <td matTooltip="{{ match.EventName }}" class="ellipsis">
+            <span>{{ match.EventName }}</span>
+          </td>
+          <td matTooltip="{{ match.EventDate | dateTimeFormat }}" class="ellipsis">
+            <span>{{ match.EventDate | dateTimeFormat }}</span>
+          </td>
+          <td matTooltip="{{ match.Sport }}" class="ellipsis">
+            <span>{{ match.Sport }}</span>
+          </td>
+          <td matTooltip="{{ match.League }}" class="ellipsis">
+            <span>{{ match.League }}</span>
+          </td>
+          <td matTooltip="{{ match.BetRate }}" class="ellipsis">
+            <span>{{ match.BetRate }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

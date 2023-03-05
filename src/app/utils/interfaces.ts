@@ -1,42 +1,42 @@
 export interface IEventChanceTypes {
-  eventID: number;
-  eventName: string;
-  eventDate: Date;
-  betType: string;
-  eventChanceTypeID: string;
-  liveBetting: string;
-  sportEventID: number;
-  sportID: number;
-  regionID: number;
-  leagueCupID: number;
-  chanceTypeID: string;
-  chanceTypeName: string;
-  sideBet: number;
-  actualGamePartID: string;
-  qctualGamePartTime: number;
-  eventChanceTypeStatus: string;
-  kiveFeedReference: number;
-  liveBettingView: number;
+  EventID: number;
+  EventName?: string;
+  EventDate?: string;
+  BetType?: string;
+  EventChanceTypeID?: number;
+  LiveBetting?: string;
+  SportEventID?: number;
+  SportID?: number;
+  RegionID?: number;
+  LeagueCupID?: number;
+  ChanceTypeID?: string;
+  ChanceTypeName?: string;
+  SideBet?: number;
+  ActualGamePartID?: string;
+  ActualGamePartTime?: number;
+  EventChanceTypeStatus?: string;
+  LiveFeedReference?: number;
+  LiveBettingView?: number;
 }
 
 export interface IOdds {
   [key: string]: {
-    eventChanceTypeID: number;
-    oddsID: number;
-    oddsRate: number;
-    tipID: string;
-    tipType: string;
-    tipOrder: string;
-    competitorID: number;
-    playerID: number;
+    EventChanceTypeID: number;
+    OddsID: number;
+    OddsRate: number;
+    TipID: string;
+    TipType: string;
+    TipOrder: string;
+    CompetitorID: number;
+    PlayerID: number;
   };
 }
 
 export interface ILabels {
   [key: string]: {
-    typ: string;
-    iD: number;
-    languageID: string;
-    name: string;
+    Typ: string;
+    ID: number;
+    LanguageID: string;
+    Name: string;
   };
 }
