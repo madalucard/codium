@@ -1,9 +1,18 @@
 Angular zadanie:
-Je potrebne vytvorit jednoduchu aplikaciu ktora nacita zapasy zo suboru offer.json (v prilohe) a zobrazi ich. Zapasy budu oddelene podla sportov a lig (napriklad rozdielne tabulky, ina farba). Kazda liga bude mat pri sebe tlacidlo, ktore skryje zapasy v nej a pri dalsom kliknuti ich zase zobrazi.
+Je potrebne vytvorit jednoduchu aplikaciu ktora nacita zapasy zo suboru 
+offer.json (v prilohe) a zobrazi ich. Zapasy budu oddelene podla sportov 
+a lig (napriklad rozdielne tabulky, ina farba). Kazda liga bude mat 
+pri sebe tlacidlo, ktore skryje zapasy v nej a pri dalsom kliknuti 
+ich zase zobrazi.
 
-Zobrazeny bude nazov, naformatovany datum a cas (21.3. 13:20), nazov sportu, regionu a ligy a kurzy 1, X, 2, 1X, X2 (ak zapas niektory nema, zobazi sa prazdne pole/pomlcka).
+Zobrazeny bude nazov, naformatovany datum a cas (21.3. 13:20), 
+nazov sportu, regionu a ligy a kurzy 1, X, 2, 1X, X2 (ak zapas niektory nema, 
+zobazi sa prazdne pole/pomlcka).
 
-Zapasy su v EventChanceTypes, kurzy ku kazdemu zapasu su v Odds, identifikovane podla EventChanceTypeID. V labels su nazvy lig (zacinaju “LC_”), regionov (“RE_”) a sportov (“SP_”) identifikovane podla ich ID v zapasoch.
+Zapasy su v EventChanceTypes, kurzy ku kazdemu zapasu su v Odds, 
+identifikovane podla EventChanceTypeID. V labels su nazvy lig 
+(zacinaju “LC_”), regionov (“RE_”) a sportov (“SP_”) identifikovane podla 
+ich ID v zapasoch.
 
  
 
@@ -11,7 +20,7 @@ Zapasy su v EventChanceTypes, kurzy ku kazdemu zapasu su v Odds, identifikovane 
 Na vytvorenie je potrebne pouzit:
 Angular https://angular.io/docs 
 
-Bolo by dobre pouzit aj SASS https://sass-lang.com/   (SCSS syntax) ;)
+Bolo by dobre pouzit aj SASS https://sass-lang.com/   (SCSS syntax) ;
 
 
 

@@ -1,0 +1,70 @@
+<div class="component-container">
+  <h1>Testing Table</h1>
+  <div class="table-wrapper">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th *ngFor="let column of displayedColumns">{{ column }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of eventChanceTypes">
+          <td matTooltip="{{ event.EventID }}" class="ellipsis">
+            <span>{{ event.EventID }}</span>
+          </td>
+          <td matTooltip="{{ event.EventName }}" class="ellipsis">
+            <span>{{ event.EventName }}</span>
+          </td>
+          <td matTooltip="{{ event.EventDate | dateTimeFormat }}" class="ellipsis">
+            <span>{{ event.EventDate | dateTimeFormat }}</span>
+          </td>
+          <td matTooltip="{{ event.BetType }}" class="ellipsis">
+            <span>{{ event.BetType }}</span>
+          </td>
+          <td matTooltip="{{ event.EventChanceTypeID }}" class="ellipsis">
+            <span>{{ event.EventChanceTypeID }}</span>
+          </td>
+          <td matTooltip="{{ event.LiveBetting }}" class="ellipsis">
+            <span>{{ event.LiveBetting }}</span>
+          </td>
+          <td matTooltip="{{ event.SportEventID }}" class="ellipsis">
+            <span>{{ event.SportEventID }}</span>
+          </td>
+          <td matTooltip="{{ event.SportID }}" class="ellipsis">
+            <span>{{ event.SportID }}</span>
+          </td>
+          <td matTooltip="{{ event.RegionID }}" class="ellipsis">
+            <span>{{ event.RegionID }}</span>
+          </td>
+          <td matTooltip="{{ event.LeagueCupID }}" class="ellipsis">
+            <span>{{ event.LeagueCupID }}</span>
+          </td>
+          <td matTooltip="{{ event.ChanceTypeID }}" class="ellipsis">
+            <span>{{ event.ChanceTypeID }}</span>
+          </td>
+          <td matTooltip="{{ event.ChanceTypeName }}" class="ellipsis">
+            <span>{{ event.ChanceTypeName }}</span>
+          </td>
+          <td matTooltip="{{ event.SideBet }}" class="ellipsis">
+            <span>{{ event.SideBet }}</span>
+          </td>
+          <td matTooltip="{{ event.ActualGamePartID }}" class="ellipsis">
+            <span>{{ event.ActualGamePartID }}</span>
+          </td>
+          <td matTooltip="{{ event.ActualGamePartTime }}" class="ellipsis">
+            <span>{{ event.ActualGamePartTime }}</span>
+          </td>
+          <td matTooltip="{{ event.EventChanceTypeStatus }}" class="ellipsis">
+            <span>{{ event.EventChanceTypeStatus }}</span>
+          </td>
+          <td matTooltip="{{ event.LiveFeedReference }}" class="ellipsis">
+            <span>{{ event.LiveFeedReference }}</span>
+          </td>
+          <td matTooltip="{{ event.LiveBettingView }}" class="ellipsis">
+            <span>{{ event.LiveBettingView }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
