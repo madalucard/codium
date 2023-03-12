@@ -57,7 +57,7 @@ export class sportLabelPipe implements PipeTransform {
 })
 export class isFavouriteSportPipe implements PipeTransform {
   transform(sport: any): string {
-    return sport.isFavourite;
+    return sport['value'].isFavourite;
   }
 }
 

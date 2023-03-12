@@ -83,11 +83,11 @@ export class FinalTableComponent implements OnInit {
   }
 
   public onFavouriteClick(value: any) {
-    this.sportLabels.forEach((e) => {
-      if (e.label == value.label) {
-        e.isFavourite = !e.isFavourite;
-      }
-    });
+    if (value['value'].isFavourite == true) {
+      value['value'].isFavourite = false;
+    } else {
+      value['value'].isFavourite = true;
+    }
   }
   public logger(m: string, e: any) {
     console.log(`${m}`, e);

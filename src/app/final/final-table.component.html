@@ -2,6 +2,7 @@
   <div *ngFor="let sport of groupedData | keyvalue" class="wrapper">
     <div class="row header">
       <div class="left-header">
+        {{ logger('day', sport) }}
         <button
           mat-icon-button
           (click)="onFavouriteClick(sport)"
@@ -116,7 +117,6 @@
           </div>
         </div>
         <div *ngFor="let day of league | keyvalue" class="match-row">
-          {{ logger('day', day) }}
           <div class="texts-container">
             <div class="text1">{{ day | dateTimeFormat2 }}</div>
             <div class="text2">Match name</div>
