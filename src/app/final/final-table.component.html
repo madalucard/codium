@@ -1,21 +1,105 @@
 <div class="component-container">
-  <div class="wrapper">
+  <div *ngFor="let sport of groupedData | keyvalue" class="wrapper">
     <div class="row header">
       <div class="left-header">
-        <div class="item">Fav</div>
-        <div class="item">Logo</div>
-        <div class="item">Sport</div>
+        <button
+          mat-icon-button
+          (click)="onFavouriteClick(sport)"
+          [ngStyle]="{ color: (sport | isFavouriteSport) ? 'yellow' : 'black' }"
+        >
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="star"></mat-icon>
+        </button>
+        <div class="item">
+          <mat-icon
+            *ngIf="(sport | sportLabel) == 'Futbal'"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="sports_soccer"
+          ></mat-icon>
+          <mat-icon
+            *ngIf="(sport | sportLabel) == 'Tenis'"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="sports_tennis"
+          ></mat-icon>
+        </div>
+        <div class="item">{{ sport | sportLabel }}</div>
       </div>
-      <div class="item sport-button">Toogle</div>
+      <div class="item sport-button">
+        <button
+          *ngIf="sport | isExpandedSport"
+          mat-button
+          type="button"
+          (click)="onExpansionClick(sport)"
+        >
+          <mat-icon
+            *ngIf="sport | isExpandedSport"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="expand_more"
+          ></mat-icon>
+        </button>
+        <button
+          *ngIf="!(sport | isExpandedSport)"
+          mat-button
+          type="button"
+          (click)="onExpansionClick(sport)"
+        >
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="expand_less"
+          ></mat-icon>
+        </button>
+      </div>
     </div>
-    <div class="column">
+    <!-- {{ logger('sport', sport) }} -->
+    <div *ngFor="let league of sport['value'][1] | keyvalue" class="column">
       <div class="league-header-row">
         <div class="left-header">
-          <div fxFlex class="item fav-icon">Fav</div>
-          <div fxFlex class="item league-name">League</div>
+          <!-- {{ logger('league', league) }} -->
+          <div fxFlex class="item fav-icon">
+            <button
+              mat-icon-button
+              (click)="onFavouriteClick(sport)"
+              [ngStyle]="{ color: (league | isFavouriteSport) ? 'yellow' : 'black' }"
+            >
+              <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="star"
+              ></mat-icon>
+            </button>
+          </div>
+          <div fxFlex class="item league-name">{{ league | leagueFormat }}</div>
           <div fxFlex class="item table-button">Btn</div>
         </div>
-        <div fxFlex class="item league-button">Toogle</div>
+        <div fxFlex class="item league-button">
+          <button
+            *ngIf="league | isExpandedLeague"
+            mat-button
+            type="button"
+            (click)="onExpansionClick(sport)"
+          >
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="expand_more"
+            ></mat-icon>
+          </button>
+          <button
+            *ngIf="!(league | isExpandedLeague)"
+            mat-button
+            type="button"
+            (click)="onExpansionClick(sport)"
+          >
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="expand_less"
+            ></mat-icon>
+          </button>
+        </div>
       </div>
       <div class="day-container">
         <div class="day-header-row">
@@ -25,15 +109,16 @@
           </div>
           <div class="odds-container">
             <div class="odd">1</div>
-            <div class="odd">1x</div>
+            <div class="odd">1X</div>
             <div class="odd">X</div>
-            <div class="odd">2x</div>
+            <div class="odd">2X</div>
             <div class="odd">2</div>
           </div>
         </div>
-        <div class="match-row">
+        <div *ngFor="let day of league | keyvalue" class="match-row">
+          {{ logger('day', day) }}
           <div class="texts-container">
-            <div class="text1">time</div>
+            <div class="text1">{{ day | dateTimeFormat2 }}</div>
             <div class="text2">Match name</div>
           </div>
           <div class="odds-container">

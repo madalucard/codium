@@ -10,14 +10,23 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
-import { dateTimeFormatPipe } from './utils/pipes';
+import {
+  dateTimeFormat2Pipe,
+  dateTimeFormatPipe,
+  isExpandedLeaguePipe,
+  isExpandedSportPipe,
+  isFavouriteSportPipe,
+  leagueFormatPipe,
+  sportLabelPipe,
+} from './utils/pipes';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatchesComponent } from './matches/matches.component';
 import { FinalTableComponent } from './final/final-table.component';
+import { MatIconModule } from '@angular/material/icon';
 
 const appRoute: Routes = [
   //{ path: '', component: AppComponent },
-  { path: '', redirectTo: 'Home', pathMatch: 'full' },  
+  { path: '', redirectTo: 'Home', pathMatch: 'full' },
   { path: 'FinalTable', component: FinalTableComponent },
   { path: 'Matches', component: MatchesComponent },
   { path: 'Testing', component: TableContainerComponent },
@@ -31,6 +40,12 @@ const appRoute: Routes = [
     NavbarComponent,
     TableContainerComponent,
     dateTimeFormatPipe,
+    sportLabelPipe,
+    isFavouriteSportPipe,
+    isExpandedSportPipe,
+    leagueFormatPipe,
+    isExpandedLeaguePipe,
+    dateTimeFormat2Pipe,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +55,7 @@ const appRoute: Routes = [
     MatPaginatorModule,
     MatSortModule,
     MatTooltipModule,
+    MatIconModule,
     RouterModule.forRoot(appRoute),
   ],
   providers: [

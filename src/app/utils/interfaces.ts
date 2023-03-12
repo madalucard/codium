@@ -3,16 +3,16 @@ export interface IEventChanceTypes {
   EventName?: string;
   EventDate?: string;
   BetType?: string;
-  EventChanceTypeID?: number;
+  EventChanceTypeID: number;
   LiveBetting?: string;
-  SportEventID?: number;
-  SportID?: number;
-  RegionID?: number;
-  LeagueCupID?: number;
-  ChanceTypeID?: string;
+  SportEventID: number;
+  SportID: number;
+  RegionID: number;
+  LeagueCupID: number;
+  ChanceTypeID: string;
   ChanceTypeName?: string;
   SideBet?: number;
-  ActualGamePartID?: string;
+  ActualGamePartID: string;
   ActualGamePartTime?: number;
   EventChanceTypeStatus?: string;
   LiveFeedReference?: number;
@@ -39,4 +39,15 @@ export interface ILabels {
     LanguageID: string;
     Name: string;
   };
+}
+
+export interface MyObject {
+  [key: string]: any;
+}
+
+export interface MyLabels {
+  label: string;
+  id: number;
+  isExpanded: boolean;
+  isFavourite: boolean;
 }
